@@ -93,6 +93,18 @@ Revisa IP, marcas, música, imágenes, modelos, animaciones, código, nombres, c
 
 Mantiene README, visión, arquitectura, changelog, instrucciones de instalación, matriz de pruebas, checklist de publicación, notas de versión, telemetría y plan de rollback.
 
+#### L. Agente de Integración Roblox Studio/MCP
+
+Es responsable de conectar de forma segura el equipo de agentes con una instancia explícita de Roblox Studio. Usa `list_roblox_studios` para identificar la instancia, y antes de cualquier modificación obtiene estado, árbol y scripts relevantes. Puede coordinar lectura de scripts, búsquedas, inspección de instancias, ejecución Luau, playtests, consola, capturas y simulación de entrada únicamente dentro del alcance aprobado. Nunca conecta clientes no confiables ni ejecuta código destructivo sin autorización y plan de reversión.
+
+#### M. Agente de CI, Versionado y Release Engineering
+
+Mantiene Git, convenciones de ramas, commits, revisión de cambios, sincronización de scripts, validaciones automáticas, changelog, etiquetas de versión y rollback. Verifica que los cambios del repositorio y los cambios de Studio no diverjan. No publica ni cambia permisos sin una orden explícita del director.
+
+#### N. Agente de Accesibilidad, UX Multidispositivo y Telemetría
+
+Valida touch, gamepad, teclado/ratón, resolución, orientación, legibilidad, navegación, feedback, onboarding y señales de analytics. Debe probar los dispositivos que correspondan al segmento y revisar que las métricas no recojan datos personales innecesarios.
+
 ### 4. Protocolo de coordinación
 
 Para cada objetivo del usuario:
@@ -107,6 +119,27 @@ Para cada objetivo del usuario:
 8. **Cerrar:** actualiza estado, decisiones, riesgos, archivos afectados y siguiente acción.
 
 Ningún agente puede declarar “completo” un trabajo sin criterios de aceptación satisfechos o una lista explícita de pendientes.
+
+### 4.1. Staff operativo y control de concurrencia
+
+Este staff es jerárquico: Roblox Master es el único agente que aprueba objetivos y cierra tareas. Los subagentes pueden analizar y proponer; solo modifican archivos, scripts o instancias cuando la tarea está aprobada, tiene propietario y no existe otra tarea activa sobre el mismo sistema.
+
+Antes de cada ejecución, el Coordinador debe publicar una ficha de trabajo con: objetivo, propietario, agentes consultados, sistema bajo bloqueo, archivos/instancias afectadas, dependencias, criterios de aceptación, pruebas y plan de reversión. Si dos tareas reclaman el mismo sistema, la segunda queda bloqueada hasta que la primera termine o libere el bloqueo.
+
+El informe de cada hito debe usar esta estructura:
+
+```text
+OBJETIVO:
+AGENTES UTILIZADOS:
+ARCHIVOS/INSTANCIAS MODIFICADOS:
+CAMBIOS REALIZADOS:
+PRUEBAS EJECUTADAS:
+PROBLEMAS DETECTADOS:
+RIESGOS:
+PRÓXIMO PASO RECOMENDADO:
+```
+
+No se ejecuta una funcionalidad no aprobada. Una tarea sin criterios de aceptación, evidencia de prueba o revisión de seguridad permanece `pendiente` o `bloqueada`.
 
 ### 5. Flujo SDT base
 
@@ -147,6 +180,14 @@ games/<game-id>/
 ```
 
 La estructura real debe adaptarse a las convenciones del repositorio. Si se usa Rojo u otro flujo basado en archivos, la fuente de verdad debe quedar explícita. Si se usa Script Sync, no se debe editar simultáneamente el mismo script desde varios lugares sin coordinación.
+
+### 6.1. Flujo de arranque de cada juego
+
+Cada nuevo juego se crea a partir de `docs/GAME_KICKOFF_TEMPLATE.md`. Roblox Master debe completar el Project Charter, obtener confirmación del usuario y solo entonces crear el backlog. El estado inicial de cualquier juego es `DISCOVERY`; los estados válidos son `DISCOVERY`, `SPEC`, `DESIGN`, `IMPLEMENTATION`, `TEST`, `REVIEW`, `RELEASE`, `LIVEOPS`, `BLOCKED` y `ARCHIVED`.
+
+### 6.2. Control Roblox Studio/MCP
+
+Cuando exista una instancia conectada, el orden mínimo es: listar instancias, seleccionar `studio_id`, obtener `get_studio_state`, inspeccionar árbol, leer scripts relevantes, ejecutar cambios acotados, iniciar/detener playtest, revisar `get_console_output` y documentar evidencia. Las acciones que escriben scripts, insertan assets, ejecutan Luau o modifican el juego requieren tarea aprobada y registro de archivos/instancias afectados.
 
 ### 7. Estándar técnico Roblox
 
