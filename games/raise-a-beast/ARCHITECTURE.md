@@ -1,5 +1,9 @@
 # Arquitectura técnica inicial
 
+## Flujo de scripting
+
+El proyecto usa **Rojo**. Los archivos Luau del repositorio son la fuente de verdad; Roblox Studio no debe convertirse en una segunda fuente de cambios para los mismos scripts. La configuración está en `default.project.json` y el código vive en `src/`.
+
 ## Autoridad
 
 El cliente solicita acciones; el servidor valida contexto, propiedad, tipos, rangos, frecuencia, costes, recompensas y persistencia. No se acepta del cliente el precio, rareza, resultado de fusión, saldo ni identidad de una criatura.
@@ -7,18 +11,12 @@ El cliente solicita acciones; el servidor valida contexto, propiedad, tipos, ran
 ## Estructura prevista
 
 ```text
-ReplicatedStorage/
-  Shared/
-  Remotes/
-ServerScriptService/
-  Services/
-ServerStorage/
-  Definitions/
-StarterPlayer/StarterPlayerScripts/
-StarterGui/
-Workspace/
-  Map/
-  PlayerPlots/
+games/raise-a-beast/
+  default.project.json
+  src/
+    shared/
+    server/
+    client/
 ```
 
 ## Módulos previstos
