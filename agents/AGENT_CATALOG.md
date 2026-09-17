@@ -53,6 +53,9 @@ Cada agente tiene un ID estable para asignación, un ámbito y entregables esper
 | `localization` | Localization Manager | Idioma fuente, tablas, traducciones, contexto y cobertura |
 | `ci_release` | CI, Versionado y Release Engineering | Ramas, validaciones, releases, rollback y sincronización |
 | `documentation` | Documentation y Knowledge Management | README, ADR, changelog, runbooks y documentación vigente |
+| `skill_orchestrator` | Skill Orchestrator | Selección, composición, procedencia y conflictos de skills |
+| `asset_provenance_reviewer` | Asset Provenance Reviewer | Licencias, scripts ocultos, procedencia y compatibilidad de assets |
+| `studio_mcp_reviewer` | Studio MCP Reviewer | Verificación de instancia, cambios acotados, playtest y evidencia |
 
 ## Reglas de activación
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: Roblox Production
+  short_description: Production-safe Roblox development workflow
+  default_prompt: Apply the Roblox Master production loop to this feature, including architecture, security, testing, licensing, and evidence.

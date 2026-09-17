@@ -58,6 +58,9 @@ Roblox Master es el director único. El Coordinador convierte sus órdenes en ta
 | `localization` | Localization Manager | Idiomas, traducciones, contexto y cobertura |
 | `ci_release` | CI, Versionado y Release Engineering | Ramas, validaciones, releases y rollback |
 | `documentation` | Documentation y Knowledge Management | README, ADR, changelog y runbooks |
+| `skill_orchestrator` | Skill Orchestrator | Selección, composición y conflictos de skills |
+| `asset_provenance_reviewer` | Asset Provenance Reviewer | Licencias, procedencia y seguridad de assets |
+| `studio_mcp_reviewer` | Studio MCP Reviewer | Instancia, cambios acotados, playtest y evidencia |
 
 ## Reglas de staff
 

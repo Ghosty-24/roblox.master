@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "skills": {
+    "building-3d-objects": {
+      "source": "ohzw/roblox-dev-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/building-3d-objects/SKILL.md",
+      "computedHash": "7eb43f8f08ccf81375f2192f7d09e01e027d9f65f3a1ace0a256ef6d75a39d44"
+    },
+    "roblox-animation-vfx": {
+      "source": "tabooharmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/roblox-animation-vfx/SKILL.md",
+      "computedHash": "ee91a77d7f5b370fc01823755618e0658a4ad5e0c1cf471135cd469356c5c919"
+    },
+    "roblox-building": {
+      "source": "tabooharmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/roblox-building/SKILL.md",
+      "computedHash": "7a0ff76ea1ecfe94c4388df4859aa32de9cdaa1d009443363b776e01510917a3"
+    },
+    "roblox-game-development": {
+      "source": "greedychipmunk/agent-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-game-developer/SKILL.md",
+      "computedHash": "b41dd9c5d861144c8c9fd964a9d9dd137420eda7d9e6761b27a51cf86f446042"
+    },
+    "roblox-luau": {
+      "source": "gamedev-skills/awesome-gamedev-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/other-engines/roblox-luau/SKILL.md",
+      "computedHash": "972fdc180c792b7e50e10adfd800a798d59ae0fb1ee7782958653c96c36d7785"
+    }
+  }
+}

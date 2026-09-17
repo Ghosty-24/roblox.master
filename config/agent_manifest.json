@@ -33,6 +33,9 @@
     {"id":"community_ugc_moderation","name":"Community, UGC y Moderación","kind":"trust","alwaysOn":false,"canClose":false,"dependsOn":["compliance_ip_safety"]},
     {"id":"localization","name":"Localization Manager","kind":"content","alwaysOn":false,"canClose":false,"dependsOn":["buyer_persona_ux"]},
     {"id":"ci_release","name":"CI, Versionado y Release Engineering","kind":"delivery","alwaysOn":true,"canClose":false,"dependsOn":["roblox_master"]},
-    {"id":"documentation","name":"Documentation y Knowledge Management","kind":"delivery","alwaysOn":true,"canClose":false,"dependsOn":["project_coordinator"]}
+    {"id":"documentation","name":"Documentation y Knowledge Management","kind":"delivery","alwaysOn":true,"canClose":false,"dependsOn":["project_coordinator"]},
+    {"id":"skill_orchestrator","name":"Skill Orchestrator","kind":"coordination","alwaysOn":false,"canClose":false,"dependsOn":["project_coordinator"],"prompt":"agents/prompts/skill_orchestrator.md"},
+    {"id":"asset_provenance_reviewer","name":"Asset Provenance Reviewer","kind":"trust","alwaysOn":false,"canClose":false,"dependsOn":["compliance_ip_safety","environment_art"],"prompt":"agents/prompts/asset_provenance_reviewer.md"},
+    {"id":"studio_mcp_reviewer","name":"Studio MCP Reviewer","kind":"platform","alwaysOn":false,"canClose":false,"dependsOn":["studio_mcp","ci_release"],"prompt":"agents/prompts/studio_mcp_reviewer.md"}
   ]
 }
