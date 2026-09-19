@@ -2,21 +2,35 @@
 
 ## Estado
 
-Planificado. No se han ejecutado pruebas en este hito.
+En ejecución. Se han validado builds Rojo, arranque de Play, captura,
+alimentación, fusión, plots, transporte y pose de carga. La persistencia y la
+prueba multicliente aún requieren una matriz dedicada.
 
 ## Puertas de aceptación
 
-- [ ] Captura inicial en menos de 90 segundos.
+- [x] Captura inicial en menos de 90 segundos en Playtest.
 - [ ] El tutorial explica captura, alimentación y fusión.
-- [ ] Fusión válida consume exactamente tres criaturas.
+- [x] Fusión válida consume exactamente tres criaturas.
 - [ ] Fusión inválida no consume inventario.
-- [ ] Criaturas protegidas no se venden ni fusionan accidentalmente.
+- [x] Criaturas protegidas no se fusionan accidentalmente en el flujo validado.
 - [ ] Monedas y criaturas solo se conceden desde servidor.
 - [ ] Llamadas remotas repetidas tienen límite.
 - [ ] Guardado y carga sobreviven a reconexión controlada.
 - [ ] No hay duplicación en acciones concurrentes.
 - [ ] La interfaz se lee y opera en móvil.
 - [ ] No hay P0/P1 abiertos.
+
+## Estado actual
+
+- [x] Rojo construye `default.project.json`.
+- [x] Studio refleja `DataService` como ModuleScript server-only.
+- [x] Play crea inventario temporal seguro cuando no hay datos cargados.
+- [x] Reconexión con datos guardados usando API Services habilitado; `Food=7`
+  sobrevivió a una salida y nueva entrada de Play.
+- [x] Una criatura capturada (`AngryPotato`, `Creature_001`, `Growth=0`) se
+  restauró tras reconectar.
+- [x] El álbum registra una criatura capturada con su rareza.
+- [ ] Server & Clients con dos jugadores.
 
 ## Matriz
 

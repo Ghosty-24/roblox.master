@@ -1,0 +1,3 @@
+-- El showcase visual está desactivado mientras se prepara el sistema real de spawns.
+-- Los modelos de criaturas permanecen disponibles en CreatureModels para reutilizarlos
+-- cuando exista una zona de aparición y una interacción de captura aprobadas.

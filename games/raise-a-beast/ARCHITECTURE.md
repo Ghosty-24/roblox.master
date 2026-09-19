@@ -42,3 +42,11 @@ Versión de esquema, monedas, inventario, criaturas únicas, criaturas protegida
 - Guardado parcial.
 - Remotes abusables.
 - Exceso de instancias y efectos en móvil.
+
+## Persistencia implementada
+
+`src/server/DataService.luau` reconstruye el inventario desde un esquema
+versionado y guarda Food, contadores, criaturas, slots y álbum. Usa
+`RaiseABeast_MVP_Studio_v1` en Studio y `RaiseABeast_MVP_v1` fuera de Studio.
+Un fallo de carga no permite sobrescribir datos con defaults; la sesión queda
+solo en memoria hasta que el siguiente join cargue correctamente.
