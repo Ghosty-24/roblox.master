@@ -16,9 +16,13 @@ Game Design, Buyer Persona, Cumplimiento, Arquitectura y QA producen requisitos,
 
 Se define GDD ligero, core loop, mapa de sistemas, jerarquía de instancias, contratos cliente-servidor, UX, arte, balance, telemetría y matriz de assets/licencias. Resultado: diseño aprobado.
 
+Para referencias visuales se aplica además `docs/REFERENCE_WORKFLOW.md`: análisis de imagen, muestra conceptual, aprobación, descomposición, revisión de assets, implementación y comparación visual.
+
 ## 4. Implementation
 
 El Coordinador entrega tareas no solapadas. Cada tarea declara propietario, sistema bloqueado, archivos/instancias, dependencias, aceptación y rollback. Arquitectura revisa código y Studio/MCP solo actúa sobre la instancia indicada.
+
+Los recursos de Creator Store se buscan únicamente cuando la tarea los necesita. Deben ser gratuitos, registrarse en `games/<game-id>/ASSET_LICENSES.md`, inspeccionarse y aprobarse antes de insertarse.
 
 ## 5. Test
 

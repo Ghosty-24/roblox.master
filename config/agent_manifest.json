@@ -20,6 +20,7 @@
     {"id":"anti_exploit_security","name":"Anti-Exploit y Seguridad","kind":"security","alwaysOn":false,"canClose":false,"dependsOn":["luau_network_architect"]},
     {"id":"performance_engineer","name":"Performance Engineer","kind":"quality","alwaysOn":false,"canClose":false,"dependsOn":["luau_network_architect","studio_expert"]},
     {"id":"environment_art","name":"Environment y World Art","kind":"art","alwaysOn":false,"canClose":false,"dependsOn":["game_design"]},
+    {"id":"image_reference_interpreter","name":"Interpretación de Referencias Visuales","kind":"design","alwaysOn":false,"canClose":false,"dependsOn":["roblox_master","project_coordinator","environment_art"],"prompt":"agents/prompts/image_reference_interpreter.md"},
     {"id":"character_animation","name":"Character, Rigging y Animation","kind":"art","alwaysOn":false,"canClose":false,"dependsOn":["environment_art"]},
     {"id":"ui_ux","name":"UI/UX e Interacción","kind":"art","alwaysOn":false,"canClose":false,"dependsOn":["buyer_persona_ux","game_design"]},
     {"id":"audio_design","name":"Audio Design","kind":"art","alwaysOn":false,"canClose":false,"dependsOn":["game_design"]},

@@ -22,3 +22,8 @@
 - Añadido backlog por agente y sincronización del staff.
 - Añadida configuración inicial de Rojo y estructura `src/` para scripting Luau.
 - La reconexión real de DataStore y el playtest multicliente siguen pendientes.
+# Unreleased
+
+- Adaptadas las 8 bases de Zona 1 al recurso gratuito Creator Store `138263847127429` (`Steal a brainrot base! PBR Tycoon Army P Brain`).
+- Sanitizada la plantilla para eliminar scripts, cámaras, humanoides y elementos de prueba antes de clonar la geometría.
+- Conservados conveyor, parcelas, plataformas de depósito, perímetro de césped y transporte de criaturas.

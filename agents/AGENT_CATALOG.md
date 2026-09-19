@@ -29,6 +29,7 @@ Cada agente tiene un ID estable para asignación, un ámbito y entregables esper
 | ID | Agente | Entregables |
 |---|---|---|
 | `environment_art` | Environment y World Art | Greybox, mundo, iluminación, materiales, VFX y assets |
+| `image_reference_interpreter` | Interpretación de Referencias Visuales | Análisis estructurado de imágenes, proporciones, layout, incertidumbres y criterios de comparación |
 | `character_animation` | Character, Rigging y Animation | Personajes, rigs, animaciones, attachments y compatibilidad de avatares |
 | `ui_ux` | UI/UX e Interacción | Wireframes, HUD, navegación, feedback y componentes de interfaz |
 | `audio_design` | Audio Design | Música, SFX, mezcla, eventos sonoros y licencias |

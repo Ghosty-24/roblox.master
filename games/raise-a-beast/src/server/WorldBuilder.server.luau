@@ -14,6 +14,16 @@ local PlazaDef = {
 	FloorColor = Color3.fromRGB(93, 181, 103),
 	PathColor = Color3.fromRGB(236, 205, 146),
 	BaseColor = Color3.fromRGB(93, 116, 214),
+	TycoonBaseColors = {
+		Color3.fromRGB(229, 79, 72),
+		Color3.fromRGB(66, 139, 230),
+		Color3.fromRGB(141, 78, 211),
+		Color3.fromRGB(238, 142, 42),
+		Color3.fromRGB(31, 183, 148),
+		Color3.fromRGB(232, 190, 49),
+		Color3.fromRGB(214, 77, 157),
+		Color3.fromRGB(91, 181, 71),
+	},
 	TrimColor = Color3.fromRGB(255, 214, 92),
 	ConveyorColor = Color3.fromRGB(55, 62, 78),
 	ConveyorAccent = Color3.fromRGB(62, 214, 165),
@@ -103,7 +113,10 @@ for index, position in ipairs(plotPositions) do
 	plot:SetAttribute("OwnerUserId", 0)
 	plot.Parent = plots
 
-	addPart(plot, "Base", PlazaDef.PlayerBase, position, PlazaDef.BaseColor, Enum.Material.SmoothPlastic)
+	local baseColor = PlazaDef.TycoonBaseColors[index] or PlazaDef.BaseColor
+	local base = addPart(plot, "Base", PlazaDef.PlayerBase, position, baseColor, Enum.Material.SmoothPlastic)
+	base:SetAttribute("TycoonBaseColorIndex", index)
+	base:SetAttribute("Style", "LowPolyTycoon")
 	local inward = if position.Z > 0 then -1 else 1
 	local outward = -inward
 	local frontSignOffset = Vector3.new(0, 0.65, inward * 9.5)
